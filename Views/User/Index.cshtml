@@ -1,0 +1,54 @@
+ @model User;
+@using Login_Registration.Models;
+@using System.Collections.Generic;
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Registration!</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+ <body>
+     <div class="container">
+        
+ <form asp-action="Register">
+                <div class="form-group ">
+                <label asp-for="FirstName">First Name: </label>
+                <input class="form-control input-lg" asp-for="FirstName"/>
+                <span asp-validation-for="FirstName"></span><br>  
+        </div>     
+        <div class="form-group">         
+                <label asp-for="LastName">Last Name: </label>
+                <input class="form-control input-lg" asp-for="LastName">
+                <span asp-validation-for="LastName"></span><br>
+        </div>
+            <div class="form-group">
+                <label asp-for="Email">Email: </label>
+                <input class="form-control input-lg" asp-for="Email">
+                <span asp-validation-for="Email"></span><br>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password">Password: </label>
+                <input class="form-control input-lg" asp-for="Password">
+                <span asp-validation-for="Password"></span><br>
+            </div>
+            <div class="form-group">
+                <label asp-for="Confirm">Confirm Password: </label>
+                <input class="form-control input-lg" asp-for="Confirm">
+                <span asp-validation-for="Confirm"></span><br>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" asp-for="submit">Register</button>
+                 
+            </div>
+            </form>
+            
+        
+     </div>
+    </body>
+</html>
